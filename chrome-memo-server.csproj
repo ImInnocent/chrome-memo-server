@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>chrome_memo_server</RootNamespace>
+    <RootNamespace>ChromeMemo</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

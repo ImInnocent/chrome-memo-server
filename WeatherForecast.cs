@@ -1,6 +1,6 @@
 using System;
 
-namespace chrome_memo_server
+namespace ChromeMemo
 {
     public class WeatherForecast
     {

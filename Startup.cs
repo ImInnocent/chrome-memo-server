@@ -11,7 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
-namespace chrome_memo_server
+namespace ChromeMemo
 {
     public class Startup
     {
@@ -29,7 +29,7 @@ namespace chrome_memo_server
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "chrome_memo_server", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ChromeMemo", Version = "v1" });
             });
         }
 
@@ -40,7 +40,7 @@ namespace chrome_memo_server
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "chrome_memo_server v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ChromeMemo v1"));
             }
 
             app.UseRouting();

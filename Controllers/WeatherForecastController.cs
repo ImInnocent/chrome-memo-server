@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace chrome_memo_server.Controllers
+namespace ChromeMemo.Controllers
 {
     [ApiController]
     [Route("[controller]")]
