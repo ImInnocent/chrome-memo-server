@@ -10,6 +10,18 @@ namespace ChromeMemo.Controllers
     [Route("[controller]")]
     public class MemoController : ControllerBase
     {
+
+        [HttpGet]
+        public ActionResult<Memo> GetAll()
+        {
+            var memo = MemoService.Get(0);
+
+            if(memo == null)
+                return NotFound();
+
+            return memo;
+        }
+
         // GET by Id action
         [HttpGet("{id}")]
         public ActionResult<Memo> Get(int id)
