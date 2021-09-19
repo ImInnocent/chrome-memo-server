@@ -4,23 +4,23 @@ using System.Linq;
 
 namespace ChromeMemo.Services
 {
-    public static class MemoService
+    public static class UserService
     {
-        static List<Memo> Memos { get; }
+        static List<UserInfo> Users { get; }
         static int nextId = 2;
 
-        static MemoService()
+        static UserService()
         {
-            Memos = new List<Memo>();
+            Users = new List<UserInfo>();
 
-            Memos.Add(new Memo(1, 1, "안녕하세요"));
+            Users.Add(new UserInfo(1, "Inho"));
         }
 
-        public static Memo Get(int id) => Memos.FirstOrDefault(m => m.Id == id);
+        public static UserInfo Get(int id) => Users.FirstOrDefault(m => m.UserId == id);
 
         public static int Add(string name)
         {
-            int userId = nextUserId++;
+            int userId = nextId++;
             Users.Add(new UserInfo(userId, name));
 
             return userId;
